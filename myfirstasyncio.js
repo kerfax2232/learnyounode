@@ -6,7 +6,9 @@ var fs = require('fs')
 var file = process.argv[2]  // creates argument from console as var file
   
 fs.readFile(file, function (err, contents) {  
-  // fs.readFile(file, 'utf8', callback) can also be used  
+  // fs.readFile(file, 'utf8', callback) can also be used
+  // fs.readFile receives args of file from line 6 and callback function
+  // still need to understand the arguments inside the function  
   var lines = contents.toString().split('\n').length - 1  
   console.log(lines)  
 })
